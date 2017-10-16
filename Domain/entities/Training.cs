@@ -16,6 +16,6 @@ namespace Domain.entities
         public int editorId { get; set; }
         public virtual ICollection<Lesson> lessons { get; set; }
         public virtual Category category { get; set; }
-        public int categoryI { get; set; }
+        public int categoryId { get; set; }
     }
 }
