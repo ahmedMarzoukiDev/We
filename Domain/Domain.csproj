@@ -41,10 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entities\Answer.cs" />
+    <Compile Include="entities\Appointement.cs" />
+    <Compile Include="entities\Availability.cs" />
+    <Compile Include="entities\Case.cs" />
     <Compile Include="entities\Category.cs" />
     <Compile Include="entities\Lesson.cs" />
+    <Compile Include="entities\Physician.cs" />
     <Compile Include="entities\Question.cs" />
     <Compile Include="entities\Training.cs" />
+    <Compile Include="entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
