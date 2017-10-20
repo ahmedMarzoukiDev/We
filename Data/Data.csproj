@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conventions\DateTime2Convention.cs" />
     <Compile Include="Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDatabaseFactory .cs" />
@@ -56,9 +57,33 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201710151733499_training1.cs" />
-    <Compile Include="Migrations\201710151733499_training1.Designer.cs">
-      <DependentUpon>201710151733499_training1.cs</DependentUpon>
+    <Compile Include="Migrations\201710180950242_t1.cs" />
+    <Compile Include="Migrations\201710180950242_t1.Designer.cs">
+      <DependentUpon>201710180950242_t1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710181947510_training2.cs" />
+    <Compile Include="Migrations\201710181947510_training2.Designer.cs">
+      <DependentUpon>201710181947510_training2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710182019022_mg1.cs" />
+    <Compile Include="Migrations\201710182019022_mg1.Designer.cs">
+      <DependentUpon>201710182019022_mg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710191806136_test.cs" />
+    <Compile Include="Migrations\201710191806136_test.Designer.cs">
+      <DependentUpon>201710191806136_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710191858465_test1.cs" />
+    <Compile Include="Migrations\201710191858465_test1.Designer.cs">
+      <DependentUpon>201710191858465_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710191912188_te.cs" />
+    <Compile Include="Migrations\201710191912188_te.Designer.cs">
+      <DependentUpon>201710191912188_te.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710200000254_testLesson1.cs" />
+    <Compile Include="Migrations\201710200000254_testLesson1.Designer.cs">
+      <DependentUpon>201710200000254_testLesson1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +100,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710151733499_training1.resx">
-      <DependentUpon>201710151733499_training1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710180950242_t1.resx">
+      <DependentUpon>201710180950242_t1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710181947510_training2.resx">
+      <DependentUpon>201710181947510_training2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710182019022_mg1.resx">
+      <DependentUpon>201710182019022_mg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710191806136_test.resx">
+      <DependentUpon>201710191806136_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710191858465_test1.resx">
+      <DependentUpon>201710191858465_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710191912188_te.resx">
+      <DependentUpon>201710191912188_te.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710200000254_testLesson1.resx">
+      <DependentUpon>201710200000254_testLesson1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

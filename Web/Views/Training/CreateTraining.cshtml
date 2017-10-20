@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "CreateTraining";
+    Layout = "~/Views/Shared/_WeLayout.cshtml";
+}
+
+
+<div class="inner-banner">
+    <div class="container">
+        <h2>Training Sessions </h2>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">training</a></li>
+            <li class="active">training sessions</li>
+        </ol>
+    </div>
+</div>
+
+<!--CONTENT START-->
+<div class="content">
+    <div class="container">
+        <div class="content-cover">
+            <div class="row">
+                <!--PAGE CONTENT START-->
+                <div class="col-lg-12">
+                    <div class="kode-donate">
+                        <h2>Create a training session</h2>
+                        <div class="payment-info">
+                            <h3>title</h3>
+                            <input type="text" id="trainingTitle" placeholder="training session title">
+                        </div>
+                        <div class="payment-info">
+                            <h3>estimated time</h3>
+                            <input type="number" id="trainingEstimatedTime" placeholder="estimated time per minute">
+                        </div>
+                        <div class="col-md-12">
+                            <h3>training description</h3>
+                            <div class="input-container">
+                                <textarea name="message" id="trainingDescription" placeholder="add the training description"></textarea>
+                            </div>
+                        </div>
+                        <!--DIFFICULTY START-->
+                        <!--SELECT DIFFICULTY START-->
+                        <div class="select-amount">
+                            <h3>Difficulty degree</h3>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn donate-btn active">
+                                    <input type="radio" name="difficulty" id="difficulty1" value='1' autocomplete="off" checked> very easy
+                                </label>
+                                <label class="btn donate-btn">
+                                    <input type="radio" name="difficulty" id="difficulty2" value='2' autocomplete="off"> easy
+                                </label>
+                                <label class="btn donate-btn">
+                                    <input type="radio" name="difficulty" id="difficulty3" value='3' autocomplete="off"> medium
+                                </label>
+                                <label class="btn donate-btn">
+                                    <input type="radio" name="difficulty" id="difficulty3" value='4' autocomplete="off"> difficult
+                                </label>
+                                <label class="btn donate-btn">
+                                    <input type="radio" name="difficulty" id="difficulty3" value='5' autocomplete="off"> expert
+                                </label>
+                            </div>
+                        </div>
+                        <!--SELECT DIFFICULTY END-->
+                        <div class="col-md-12">
+                            <h3>Difficulty description</h3>
+                            <div class="input-container">
+                                <textarea name="message" id="difficultyDescription" placeholder="add the difficulty description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-push-11">
+                            <a href="javascript:;" id="cancelLesson" class="btn-filled-rounded"> Cancel a lesson</a>
+                            <a href="javascript:;" id="addLesson" class="btn-filled-rounded"> Add a lesson</a>
+                        </div>
+
+                        <!--CONTENT Lesson START-->
+                        <div class="content">
+                            <div class="container">
+                                <div class="content-cover">
+                                    <div class="row">
+                                        <!--PAGE CONTENT START-->
+                                        <div class="col-lg-12">
+                                            <div class="kode-donate">
+                                                <h2>Create Lessons</h2>
+                                                <div id="lessonContent">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--PAGE CONTENT END-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--CONTENT Lesson END-->
+                        
+                            <!--DIFFICULTY ENDS-->
+                        <!--PERSONAL INFO START-->
+                        <div class="personal-info">
+
+                            <a href="javascript:;" id="btnSave" class="btn-filled-rounded"> Create training</a>
+                        </div>
+                        <!--PERSONAL INFO END-->
+                    </div>
+                </div>
+                <!--PAGE CONTENT END-->
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--CONTENT END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

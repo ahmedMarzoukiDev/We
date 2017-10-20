@@ -18,6 +18,11 @@ namespace Web
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Training",
+                url: "{controller}/{action}/{TrainingModel}",
+                defaults: new { controller = "Training", action = "Training", TrainingModel = UrlParameter.Optional }
+            );
         }
     }
 }

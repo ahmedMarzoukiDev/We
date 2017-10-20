@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ServicesPattern.CustomExceptions;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -80,10 +82,10 @@ namespace ServicesPattern
             {
                 utwk.Commit();
             }
-            catch (Exception ex)
+            catch (DbEntityValidationException e)
             {
-
-                throw ex;
+                var newException = new FormattedDbEntityValidationException(e);
+                throw newException;
             }
         }
 

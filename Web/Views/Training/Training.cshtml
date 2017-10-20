@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Training";
+    Layout = "~/Views/Shared/_WeLayout.cshtml";
+}
+
+
+<div class="inner-banner">
+    <div class="container">
+        <h2>Training Sessions </h2>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">training</a></li>
+            <li class="active">training sessions</li>
+        </ol>
+    </div>
+</div>
+  <!--CONTENT START-->
+<div class="content">
+    <div class="container">
+        <div class="content-cover">
+            <div class="row">
+                <!--BLOG LIST START-->
+                <div class="col-md-6 col-sm-6">
+                    <div class="kode-blog-list">
+                        <h2>Add a training session</h2>
+                        <div class="input-container">
+                            <input type="text" id="trainingTitle" placeholder="title">
+                            <input type="text" id="trainingDescription" placeholder="description">
+                            <input type="text" id="trainingEstimatedTime" placeholder="estimated time (min)">
+                            
+                            <input type="button" value="Save" id="btnSave" class="btn btn-success" />
+                        </div>
+                        <div>
+                        <select>
+                            <option value="very easy">very easy</option>
+                            <option value="easy">easy</option>
+                            <option value="medium">medium</option>
+                            <option value="difficult">difficult</option>
+                            <option value="very difficult">very difficult</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <!--BLOG LIST END-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--CONTENT END-->
