@@ -43,8 +43,10 @@
     <Compile Include="entities\Answer.cs" />
     <Compile Include="entities\Appointement.cs" />
     <Compile Include="entities\Availability.cs" />
+    <Compile Include="entities\Booking.cs" />
     <Compile Include="entities\Case.cs" />
     <Compile Include="entities\Category.cs" />
+    <Compile Include="entities\Event.cs" />
     <Compile Include="entities\Lesson.cs" />
     <Compile Include="entities\Physician.cs" />
     <Compile Include="entities\Question.cs" />

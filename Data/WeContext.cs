@@ -29,6 +29,8 @@ namespace Data
 
         public DbSet<Case> Cases { get; set; }
 
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Booking> Tickets { get; set; }
     }
 
     public class WeContextIntializer : DropCreateDatabaseIfModelChanges<WeContext>

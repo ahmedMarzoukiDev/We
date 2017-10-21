@@ -8,7 +8,7 @@ namespace Domain.entities
 {
     public class Case
     {
-        public int McaseId { get; set; }
+        public int CaseId { get; set; }
         //liste des nom des medecin 
         public string physicianName { get; set; }
         public string decription { get; set; }

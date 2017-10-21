@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\EventConfiguration.cs" />
+    <Compile Include="CustumConventions\DateTime2Convention.cs" />
     <Compile Include="Infrastructure\DatabaseFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDatabaseFactory .cs" />
@@ -56,9 +58,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201710151733499_training1.cs" />
-    <Compile Include="Migrations\201710151733499_training1.Designer.cs">
-      <DependentUpon>201710151733499_training1.cs</DependentUpon>
+    <Compile Include="Migrations\201710211440229_WeMigrations.cs" />
+    <Compile Include="Migrations\201710211440229_WeMigrations.Designer.cs">
+      <DependentUpon>201710211440229_WeMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +77,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710151733499_training1.resx">
-      <DependentUpon>201710151733499_training1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710211440229_WeMigrations.resx">
+      <DependentUpon>201710211440229_WeMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
