@@ -23,6 +23,14 @@ namespace Data
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
+
+        public DbSet<Appointement> Appointements { get; set; }
+        public DbSet<Availability> Availabilities { get; set; }
+
+        public DbSet<Case> Cases { get; set; }
+
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Booking> Tickets { get; set; }
     }
 
     public class WeContextIntializer : DropCreateDatabaseIfModelChanges<WeContext>
