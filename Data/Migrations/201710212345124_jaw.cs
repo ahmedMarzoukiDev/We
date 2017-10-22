@@ -3,7 +3,7 @@ namespace Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class t1 : DbMigration
+    public partial class jaw : DbMigration
     {
         public override void Up()
         {
@@ -29,6 +29,7 @@ namespace Data.Migrations
                         title = c.String(),
                         description = c.String(),
                         editorId = c.Int(nullable: false),
+                        dateAdded = c.DateTime(nullable: false),
                         lessonId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.questionId)
@@ -56,41 +57,26 @@ namespace Data.Migrations
                 c => new
                     {
                         trainingId = c.Int(nullable: false, identity: true),
-                        title = c.String(),
-                        description = c.String(),
+                        title = c.String(nullable: false),
+                        description = c.String(nullable: false),
                         estimatedTime = c.Int(nullable: false),
                         dateAdded = c.DateTime(nullable: false),
                         difficultyValue = c.Int(nullable: false),
-                        difficultyDescription = c.String(),
+                        difficultyDescription = c.String(nullable: false),
                         editorId = c.Int(nullable: false),
-                        categoryId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.trainingId)
-                .ForeignKey("dbo.Categories", t => t.categoryId, cascadeDelete: true)
-                .Index(t => t.categoryId);
-            
-            CreateTable(
-                "dbo.Categories",
-                c => new
-                    {
-                        categoryId = c.Int(nullable: false, identity: true),
-                        name = c.String(),
-                    })
-                .PrimaryKey(t => t.categoryId);
+                .PrimaryKey(t => t.trainingId);
             
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Lessons", "trainingId", "dbo.Trainings");
-            DropForeignKey("dbo.Trainings", "categoryId", "dbo.Categories");
             DropForeignKey("dbo.Questions", "lessonId", "dbo.Lessons");
             DropForeignKey("dbo.Answers", "questionId", "dbo.Questions");
-            DropIndex("dbo.Trainings", new[] { "categoryId" });
             DropIndex("dbo.Lessons", new[] { "trainingId" });
             DropIndex("dbo.Questions", new[] { "lessonId" });
             DropIndex("dbo.Answers", new[] { "questionId" });
-            DropTable("dbo.Categories");
             DropTable("dbo.Trainings");
             DropTable("dbo.Lessons");
             DropTable("dbo.Questions");

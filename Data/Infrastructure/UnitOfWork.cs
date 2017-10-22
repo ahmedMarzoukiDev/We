@@ -23,7 +23,7 @@ namespace We.Data.Infrastructure
 
         public void Commit()
         {
-            dataContext.SaveChanges();
+                dataContext.SaveChanges();
         }
         
         public void Dispose()

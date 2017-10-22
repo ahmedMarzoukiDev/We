@@ -276,6 +276,7 @@
     <Content Include="content\js\bootstrap-progressbar.js" />
     <Content Include="content\js\bootstrap-slider.js" />
     <Content Include="content\js\bootstrap.min.js" />
+    <Content Include="content\js\Create.js" />
     <Content Include="content\js\dl-menu\component.css" />
     <Content Include="content\js\dl-menu\jquery.dlmenu.js" />
     <Content Include="content\js\dl-menu\modernizr.custom.js" />
@@ -290,7 +291,6 @@
     <Content Include="content\js\jquery.plugin.js" />
     <Content Include="content\js\map.js" />
     <Content Include="content\js\owl.carousel.js" />
-    <Content Include="content\js\TrainingAddAjax.js" />
     <Content Include="content\js\waypoints.min.js" />
     <Content Include="content\latest-news-2.html" />
     <Content Include="content\latest-news-3.html" />
@@ -332,6 +332,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Controllers\TrainingController.cs" />
+    <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\LessonModel.cs" />
     <Compile Include="Models\QuestionModel.cs" />
     <Compile Include="Models\TrainingModel.cs" />

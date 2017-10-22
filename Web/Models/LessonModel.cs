@@ -13,5 +13,6 @@ namespace Web.Models
         public int trainingId { get; set; }
         public virtual TrainingModel training { get; set; }
         public ICollection<QuestionModel> questions { get; set; }
+        public int lessonNumber { get; set; }
     }
 }

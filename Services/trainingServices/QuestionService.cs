@@ -17,5 +17,9 @@ namespace Services.trainingServices
         {
 
         }
+        public Question GetLastAdded()
+        {
+            return (Question)utwk.getRepository<Question>().GetAll().OrderByDescending(t => t.questionId).First();
+        }
     }
 }

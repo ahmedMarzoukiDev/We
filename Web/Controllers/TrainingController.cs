@@ -13,10 +13,14 @@ namespace Web.Controllers
     {
         TrainingService ts = null;
         LessonService ls = null;
+        QuestionService qs = null;
+        AnswerService ans = null;
         public TrainingController()
         {
              ts = new TrainingService();
             ls = new LessonService();
+            qs = new QuestionService();
+            ans = new AnswerService();
         }
 
         // GET: Training/Training
@@ -32,42 +36,83 @@ namespace Web.Controllers
         }
         // POST: Training/CreateTraining
         [HttpPost]
-        public ActionResult CreateTraining(TrainingModel t,LessonModel[] l)
+        public ActionResult CreateTraining(TrainingModel t,LessonModel[] l,QuestionModel[] q,AnswerModel[] a)
         {
-            //Json(t, JsonRequestBehavior.AllowGet);
-           
-                Training tr = new Training();
-                tr.title = t.title;
-                tr.description = t.description;
-                tr.estimatedTime = t.estimatedTime;
-                tr.dateAdded = DateTime.Now;
-                tr.editorId = 1;
-                //tr.categoryId = 1;
-                tr.difficultyValue = t.difficultyValue;
-                tr.difficultyDescription = t.difficultyDescription;
+                
 
             Training lastTraining = new Training();
             lastTraining = ts.GetLastAdded();
+            Lesson lastLesson = new Lesson();
+            lastLesson = ls.GetLastAdded();
+            Question lastQuestion = new Question();
+            lastQuestion = qs.GetLastAdded();
+            foreach (var itema in a)
+            {
+
+                Answer an = new Answer();
+                an.questionId = lastQuestion.questionId + itema.questionNumber;
+                an.description = itema.description;
+                if (itema.isTrue==0)
+                {
+                    an.isTrue = true;
+                }
+                else
+                {
+                    an.isTrue = false;
+                }
+                
+                an.editorId = 1;
+                ans.Add(an);
+            }
+            
+            // ADD QUESTIONS
+
+            foreach (var itemq in q)
+            {
+
+                Question qu = new Question();
+                qu.lessonId = lastLesson.lessonId + itemq.lessonNumber;
+                qu.title = itemq.title;
+                qu.description = itemq.description;
+                qu.editorId = 1;
+                qu.dateAdded = DateTime.Now;
+                qs.Add(qu);
+            }
             foreach (var item in l)
             {
+                // ADD A LESSON
                 Lesson le = new Lesson();
-                le.trainingId = lastTraining.trainingId+1;
+                le.trainingId = lastTraining.trainingId + 1;
                 le.title = item.title;
                 le.description = item.description;
                 le.estimatedTime = item.estimatedTime;
                 le.dateAdded = DateTime.Now;
                 le.editorId = 1;
                 ls.Add(le);
-               
+
             }
-                ts.Add(tr);
-                ts.Commit();
+
+
+            //ADD A TRAINING SESSION
+            Training tr = new Training();
+            tr.title = t.title;
+            tr.description = t.description;
+            tr.estimatedTime = t.estimatedTime;
+            tr.dateAdded = DateTime.Now;
+            tr.editorId = 1;
+            //tr.categoryId = 1;
+            tr.difficultyValue = t.difficultyValue;
+            tr.difficultyDescription = t.difficultyDescription;
+            ts.Add(tr);
+            ts.Commit();
                 ls.Commit();
-                RedirectToAction("Training");
+                qs.Commit();
+                ans.Commit();
+                
            
 
-            return View();
-            
+            return RedirectToAction("Training");
+
         }
 
         // GET: Training/Details/5

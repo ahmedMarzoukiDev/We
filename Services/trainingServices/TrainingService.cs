@@ -57,7 +57,8 @@ namespace Services.trainingServices
         }
         public Training GetLastAdded()
         {
-            return (Training) utwk.getRepository<Training>().GetAll().OrderByDescending(t => t.dateAdded).First();
+
+            return (Training) utwk.getRepository<Training>().GetAll().OrderByDescending(t => t.trainingId).First();
         }
         /* public IEnumerable<Training> filter(Category category)
          {

@@ -19,7 +19,7 @@ namespace Services.trainingServices
 
         public Lesson GetLastAdded()
         {
-            return (Lesson)utwk.getRepository<Lesson>().GetAll().OrderByDescending(t => t.dateAdded).First();
+            return (Lesson)utwk.getRepository<Lesson>().GetAll().OrderByDescending(t => t.lessonId).First();
         }
 
     }
